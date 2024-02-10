@@ -1,0 +1,29 @@
+@use 'colors' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  color: $clr-grey-dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  font-family: 'Golos Text', sans-serif;
+}
+
+#app {
+  height: 100%;
+}
+
+main {
+  padding-inline: 72px;
+}
+
+td{
+  padding: 0;
+}
