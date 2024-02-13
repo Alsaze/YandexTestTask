@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
           rel="stylesheet">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/fonts.css">
     <link rel="stylesheet" href="assets/styles/normalize.css">
@@ -18,7 +20,7 @@
 <header class="header">
     <div class="header__city"></div>
     <div class="container">
-        <img alt="#" src="public/img/logo.svg">
+        <img alt="#" src="public/img/logo.svg" class="header__logo">
         <div class="header__content">
             <div class="header__title">
                 <p>Превратите уездный город</p>
@@ -26,7 +28,7 @@
                 <p style="text-align: right">земного шара</p>
             </div>
             <div class="header__subtitle">
-                Оплатите взнос на телеграммы для организации<br> Международного васюкинского турнира по шахматам
+                Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
             </div>
             <div class="header__buttons">
                 <a class="btn btn--common" href="#support-section">Поддержать шахматную мысль</a>
@@ -45,11 +47,20 @@
 <main>
     <div class="container">
         <section id="support-section" class="support">
-            <div class="support__text">
+            <div class="support__text desktop">
                 Чтобы поддержать<br> Международный васюкинский турнир посетите лекцию на тему:
                 <strong>«Плодотворная дебютная идея»</strong>
             </div>
-            <img src="public/img/support.png" alt="#">
+
+            <div class="support__text mobile">
+                Чтобы поддержать Международный васюкинский турнир
+            </div>
+
+            <img class="support__img" src="public/img/support.png" alt="#">
+
+            <div class="support__text mobile">
+                посетите лекцию на тему: <strong>«Плодотворная дебютная идея»</strong>
+            </div>
         </section>
 
         <section class="session">
@@ -87,7 +98,7 @@
                     Будущие источники обогащения васюкинцев
                 </a>
             </p>
-            <div class="stages__content">
+            <div class="stages__content desktop">
                 <div class="stages__cell">Строительство железнодорожной магистрали Москва-Васюки</div>
 
                 <div class="stages__cell">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</div>
@@ -113,26 +124,99 @@
                     <img src="public/img/plane.png" alt="#" class="stages__plane">
                 </div>
             </div>
+
+            <div class="stages__content carousel mobile" data-carousel="stages">
+                <img src="public/img/plane.png" alt="#" class="stages__plane">
+                <div class="carousel__inner">
+                    <div class="carousel__slide">
+                        <div class="stages__wrapper">
+                            <div class="stages__cell">
+                                Строительство железнодорожной магистрали Москва-Васюки
+                            </div>
+                            <div class="stages__cell">
+                                Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__slide">
+                        <div class="stages__wrapper">
+                            <div class="stages__cell">
+                                Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей,
+                                фруктов, икры, шоколадных конфет
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__slide">
+                        <div class="stages__wrapper">
+                            <div class="stages__cell">
+                                Строительство дворца для турнира
+                            </div>
+                            <div class="stages__cell">
+                                Размещение гаражей для гостевого автотранспорта
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__slide">
+                        <div class="stages__wrapper">
+                            <div class="stages__cell">
+                                Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel__slide">
+                        <div class="stages__wrapper">
+                            <div class="stages__cell">
+                                Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и
+                                дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="players__buttons mobile">
+                <button class="btn btn--circle" data-carousel-prev="stages">
+                    <img src="public/img/arrow-left.png" alt="#">
+                </button>
+                <div class="players__wrapper" data-carousel-pagination="stages">
+                    <div class="players__point"></div>
+                    <div class="players__point players__point--active"></div>
+                    <div class="players__point"></div>
+                    <div class="players__point"></div>
+                    <div class="players__point"></div>
+                </div>
+                <button class="btn btn--circle" data-carousel-next="stages">
+                    <img src="public/img/arrow-right.png" alt="#">
+                </button>
+            </div>
         </section>
 
         <section class="players">
+
             <div class="players__header">
                 <span class="players__title">
                     Участники турнира
                 </span>
-                <div class="players__buttons">
+                <div class="players__buttons desktop">
                     <button class="btn btn--circle" data-carousel-prev="players">
                         <img src="public/img/arrow-left.png" alt="#">
                     </button>
                     <span>
                         <span data-carousel-current-page="players">1</span>
-                        <span class="players__count">/ <span data-carousel-pages-count="players">2</span></span>
+                        <span class="players__count">
+                            / <span data-carousel-pages-count="players">2</span>
+                        </span>
                     </span>
                     <button class="btn btn--circle" data-carousel-next="players">
                         <img src="public/img/arrow-right.png" alt="#">
                     </button>
                 </div>
             </div>
+
             <div class="players__container carousel" data-carousel="players">
                 <div class="carousel__inner">
                     <div class="carousel__slide">
@@ -197,6 +281,21 @@
                     </div>
                 </div>
             </div>
+
+            <div class="players__buttons mobile">
+                <button class="btn btn--circle" data-carousel-prev="players">
+                    <img src="public/img/arrow-left.png" alt="#">
+                </button>
+                <span>
+                    <span data-carousel-current-page="players">1</span>
+                    <span class="players__count">
+                        / <span data-carousel-pages-count="players">2</span>
+                    </span>
+                </span>
+                <button class="btn btn--circle" data-carousel-next="players">
+                    <img src="public/img/arrow-right.png" alt="#">
+                </button>
+            </div>
         </section>
     </div>
 </main>
@@ -217,6 +316,7 @@
 </body>
 <script src="carousel.js"></script>
 <script>
-    const playersCarousel = new Carousel('players')
+    const playersCarousel = new Carousel('players');
+    const stagesCarousel = new Carousel('stages');
 </script>
 </html>

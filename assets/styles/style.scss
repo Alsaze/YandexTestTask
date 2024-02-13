@@ -22,8 +22,24 @@ body {
 
 main {
   padding-inline: 72px;
+
+  @media (max-width: 480px) {
+    padding-inline: 20px;
+  }
 }
 
-td{
+td {
   padding: 0;
+}
+
+.mobile {
+  @media (min-width: 481px) {
+    display: none !important;
+  }
+}
+
+.desktop {
+  @media (max-width: 480px) {
+    display: none !important;
+  }
 }

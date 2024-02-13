@@ -21,9 +21,26 @@ body {
 main {
   padding-inline: 72px;
 }
+@media (max-width: 480px) {
+  main {
+    padding-inline: 20px;
+  }
+}
 
 td {
   padding: 0;
+}
+
+@media (min-width: 481px) {
+  .mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .desktop {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
