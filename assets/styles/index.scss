@@ -114,7 +114,7 @@ a {
     border: 0;
     background: $clr-black;
 
-    @media (max-width: 450px) {
+    @media (max-width: 480px) {
       height: 36px;
       width: 36px;
     }
@@ -157,7 +157,8 @@ a {
 
   @media (max-width: 480px) {
     padding-top: 18px;
-    background: url("/public/img/header-bg-phones.png") no-repeat center;
+    background: url("/public/img/header-bg-phones.png") no-repeat bottom;
+    background-size: cover;
   }
 
   &__city {
@@ -474,6 +475,8 @@ a {
 
     @media (max-width: 480px) {
       padding: 0 20px 0 20px;
+
+      counter-increment: number;
     }
 
     &::before {
@@ -492,6 +495,10 @@ a {
       line-height: 36px;
       font-size: 20px;
       font-weight: 600;
+
+      @media (max-width: 480px) {
+        content: counter(number);
+      }
     }
   }
 
@@ -504,7 +511,7 @@ a {
     bottom: 0;
     position: absolute;
 
-    @media (max-width: 450px) {
+    @media (max-width: 480px) {
       width: 100%;
       z-index: 100;
       margin-bottom: 225px;
@@ -517,7 +524,7 @@ a {
 .players {
   margin: 200px 0 140px;
 
-  @media (max-width: 450px) {
+  @media (max-width: 480px) {
     text-align: center;
     margin-top: 140px;
     margin-bottom: 100px;
@@ -547,7 +554,7 @@ a {
     gap: 14px;
     align-items: center;
 
-    @media (max-width: 450px) {
+    @media (max-width: 480px) {
       margin-top: 40px;
     }
   }
@@ -569,7 +576,7 @@ a {
     justify-content: space-between;
     gap: 20px;
 
-    @media (max-width: 450px) {
+    @media (max-width: 480px) {
       margin-top: 40px;
     }
   }
@@ -606,9 +613,8 @@ a {
   font-size: 16px;
   padding: 40px 72px 72px;
 
-  p {
-    margin-inline: auto;
-    max-width: 1222px;
+  @media (max-width: 480px) {
+    padding: 40px 20px 60px 20px;
   }
 }
 
@@ -620,8 +626,10 @@ a {
     width: 100%;
     transition: transform .3s ease-in-out;
 
-    @media (max-width: 450px) {
+    @media (max-width: 480px) {
       position: relative;
+
+      counter-reset: number 0;
     }
   }
 

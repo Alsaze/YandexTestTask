@@ -43,10 +43,10 @@ class Carousel {
         this.paginationEls = document.querySelectorAll(`[data-carousel-pagination="${id}"]`);
         this.mediaQueryList = window.matchMedia("(max-width: 480px)");
 
-        this.renderPagination();
         this.update();
         this.updateSlidesWidth();
         this.registerEventListeners();
+        this.renderPagination();
     }
 
     get isMobile() {
@@ -126,6 +126,9 @@ class Carousel {
 
         for (const el of this.paginationEls) {
             el.innerHTML = '';
+
+            console.log(this.pagesCount);
+            console.log(this.paginationEls);
 
             for (let page = 1; page <= this.pagesCount; page++) {
                 const bullet = document.createElement('div');
